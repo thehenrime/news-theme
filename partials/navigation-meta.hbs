@@ -1,5 +1,5 @@
 <ul class="nav-meta">
-  {{#if @site.twitter}}
+  {{!-- {{#if @site.twitter}}
   <li class="nav-twitter">
     <a aria-label="Twitter" href="{{twitter_url}}" title="{{@site.twitter}}" target="_blank">
       <i class="icon icon-twitter" aria-hidden="true"></i>
@@ -13,12 +13,31 @@
       <i class="icon icon-facebook" aria-hidden="true"></i>
       <span>{{@site.facebook}}</span>
     </a>
-  </li>
-  {{/if}}
+  </li> --}}
+  {{!-- {{/if}} --}}
   <li class="nav-search">
-    <a title="{{t "Search"}}" data-ghost-search>
+    <a title="{{t 'Search'}}" data-ghost-search>
       <i class="icon icon-search" aria-hidden="true"></i>
       <span>{{t "Search"}}</span>
     </a>
   </li>
+  {{#unless @member}}
+    {{#unless @site.members_invite_only}}
+      <li class="nav-signin">
+        <a href="#/portal/signin" data-portal="signin">{{t "Sign In"}}</a>
+      </li>
+      <li class="nav-signup">
+        <a href="#/portal/signup" data-portal="signup">{{t "Subscribe"}}</a>
+      </li>
+    {{else}}
+      <li class="nav-signin">
+        <a href="#/portal/signin" data-portal="signin">{{t "Sign In"}}</a>
+      </li>
+    {{/unless}}
+  {{else}}
+    <li class="nav-account">
+      <a href="#/portal/account" data-portal="account">Account</a>
+    </li>
+  {{/unless}}
+
 </ul>
