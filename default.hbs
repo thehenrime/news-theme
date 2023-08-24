@@ -77,18 +77,12 @@
 			<div class="inner">
 				<a class="nav-menu" role="button"><i class="icon icon-menu" aria-hidden="true"></i>{{t "Menu"}}</a>
 				<a class="nav-search" title="{{t "Search"}}" role="button" data-ghost-search><i class="icon icon-search" aria-hidden="true"></i></a>
-				<div class="gh-head-members">
-					{{#unless @member}}
-						{{#unless @site.members_invite_only}}
-							<a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
-							<a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
-						{{else}}
-							<a class="gh-head-button" href="#/portal/signin" data-portal="signin">Sign in</a>
-						{{/unless}}
-					{{else}}
-						<a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
-					{{/unless}}
-				</div>
+				
+				{{#unless @member}}
+					<a class="nav-account" role="button" href="#/portal/signin" data-portal="signin"><img width="20" height="20" src="{{asset "img/icon/account-avatar.svg"}}" /></a>
+				{{else}}
+					<a class="nav-account" role="button" href="#/portal/account" data-portal="account"><img width="20" height="20" src="{{asset "img/icon/account-avatar.svg"}}" /></a>
+				{{/unless}}
 			</div>
 		</div>
 	</div>

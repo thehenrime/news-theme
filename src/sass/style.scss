@@ -10,12 +10,13 @@ $breakpoint-large: 960px;
 $breakpoint-medium: 640px;
 $breakpoint-small: 480px;
 $inner: calc(64rem + 8vw);
+
 /* ==========================================================================
    Basics
    ========================================================================== */
 :root {
-	--font-primary: 'Fira Sans', sans-serif;
-	--font-secondary: 'Libre Baskerville', serif;
+	--font-primary: "Fira Sans", sans-serif;
+	--font-secondary: "Libre Baskerville", serif;
 }
 
 html {
@@ -136,8 +137,8 @@ textarea {
 		}
 	}
 
-	ol > li:before,
-	ul > li:before {
+	ol>li:before,
+	ul>li:before {
 		position: absolute;
 		width: 1.5em;
 		margin-left: -2em;
@@ -149,12 +150,12 @@ textarea {
 		font-family: var(--font-primary);
 	}
 
-	ul > li:before {
+	ul>li:before {
 		margin-top: -1px;
-		content: '—' !important;
+		content: "—" !important;
 	}
 
-	ol > li:before {
+	ol>li:before {
 		content: counter(item) ". " !important;
 		counter-increment: item;
 	}
@@ -232,7 +233,7 @@ textarea {
 	}
 
 	dl dt:before {
-		content: '';
+		content: "";
 		position: absolute;
 		width: 1em;
 		height: 2px;
@@ -247,7 +248,7 @@ textarea {
 	}
 
 	mark {
-		background-color: #FFC336;
+		background-color: #ffc336;
 	}
 
 	code,
@@ -377,15 +378,14 @@ textarea {
 	}
 
 	form {
-
 		p {
 			margin: 0 0 2rem;
 		}
 
 		fieldset {
-				border: 0;
-				margin: 0;
-				padding: 0;
+			border: 0;
+			margin: 0;
+			padding: 0;
 		}
 	}
 
@@ -474,18 +474,15 @@ textarea {
 	input[type="submit"]:hover,
 	input[type="button"]:hover,
 	.kg-btn:hover,
-	.button:hover {
-
-	}
+	.button:hover {}
 
 	input[type="reset"]:focus,
 	input[type="submit"]:focus,
 	input[type="button"]:focus,
 	.kg-btn:focus,
-	.button:focus {
-
-	}
+	.button:focus {}
 }
+
 /* ==========================================================================
    KG Cards
    ========================================================================== */
@@ -500,7 +497,7 @@ textarea {
 		padding: 2rem 0;
 
 		&:after {
-			content: '';
+			content: "";
 			position: absolute;
 			left: 0;
 			bottom: 0;
@@ -526,15 +523,12 @@ textarea {
 	// KG File
 
 	.kg-file-card {
-
 		.kg-file-card-container {
 			padding: 2.5rem;
 			background: var(--color-background-secondary);
 			border: 1px solid var(--color-background-contrast);
 
-			.kg-file-card-icon {
-
-			}
+			.kg-file-card-icon {}
 
 			.kg-file-card-contents {
 				margin: 0;
@@ -559,6 +553,7 @@ textarea {
 						display: inline-block;
 						line-height: inherit;
 					}
+
 					.kg-file-card-filesize {
 						display: inline-block;
 						font-size: 0.9em;
@@ -584,6 +579,7 @@ textarea {
 			figcaption {
 				padding-left: 6rem;
 				padding-right: 6rem;
+
 				@media only screen and (max-width: $breakpoint-medium) {
 					padding-left: 2rem;
 					padding-right: 2rem;
@@ -591,6 +587,7 @@ textarea {
 
 				&:after {
 					margin-left: 6rem;
+
 					@media only screen and (max-width: $breakpoint-medium) {
 						margin-left: 2rem;
 					}
@@ -606,6 +603,7 @@ textarea {
 			figcaption {
 				padding-left: 8rem;
 				padding-right: 8rem;
+
 				@media only screen and (max-width: $breakpoint-medium) {
 					padding-left: 4rem;
 					padding-right: 4rem;
@@ -613,6 +611,7 @@ textarea {
 
 				&:after {
 					margin-left: 8rem;
+
 					@media only screen and (max-width: $breakpoint-medium) {
 						margin-left: 4rem;
 					}
@@ -624,7 +623,7 @@ textarea {
 			margin: 0 auto;
 		}
 
-		.kg-image-full + figcaption {
+		.kg-image-full+figcaption {
 			margin-bottom: 1.33334em;
 		}
 	}
@@ -639,6 +638,7 @@ textarea {
 		figcaption {
 			padding-left: 6rem;
 			padding-right: 6rem;
+
 			@media only screen and (max-width: $breakpoint-medium) {
 				padding-left: 2rem;
 				padding-right: 2rem;
@@ -646,6 +646,7 @@ textarea {
 
 			&:after {
 				margin-left: 6rem;
+
 				@media only screen and (max-width: $breakpoint-medium) {
 					margin-left: 2rem;
 				}
@@ -684,7 +685,7 @@ textarea {
 	.kg-embed-card {
 		margin: 0 0 4rem;
 
-		> * {
+		>* {
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -787,6 +788,7 @@ textarea {
 	.kg-bookmark-publisher {
 		color: var(--ghost-accent-color);
 	}
+
 	@media (max-width: $breakpoint-medium) {
 		.kg-bookmark-container {
 			flex-direction: column;
@@ -815,14 +817,17 @@ textarea {
 		border-radius: 3px;
 		padding: 2.5rem;
 	}
-	.kg-toggle-card +.kg-toggle-card {
+
+	.kg-toggle-card+.kg-toggle-card {
 		margin-top: calc(-4rem - 1px);
 	}
-	.kg-toggle-card {
 
+	.kg-toggle-card {
 		.kg-toggle-content {
 
-			p, ol, ul {
+			p,
+			ol,
+			ul {
 				font-size: inherit;
 				line-height: inherit;
 				margin-top: 1rem;
@@ -830,6 +835,7 @@ textarea {
 		}
 	}
 }
+
 /* ==========================================================================
     Misc
     ========================================================================== */
@@ -840,6 +846,7 @@ textarea {
 .hidden {
 	display: none;
 }
+
 @keyframes fadein {
 	0% {
 		opacity: 0.2;
@@ -860,7 +867,7 @@ textarea {
 
 	&:after,
 	&:before {
-		content: '';
+		content: "";
 		position: absolute;
 		z-index: 1;
 		width: 50%;
@@ -887,6 +894,7 @@ textarea {
 		object-fit: cover;
 	}
 }
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -899,7 +907,7 @@ textarea {
 		color: white;
 		background: black;
 		overflow: hidden;
-		text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
 		&:after {
 			display: none;
@@ -933,15 +941,19 @@ textarea {
 	align-items: center;
 
 	&:after {
-		content: '';
+		content: "";
 		position: absolute;
 		width: 100%;
 		height: 66.666%;
 		left: 0;
 		bottom: 0;
 		z-index: 8;
-		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.333) 100%);
-		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.333) 100%);
+		background: -webkit-linear-gradient(top,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.333) 100%);
+		background: linear-gradient(to bottom,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.333) 100%);
 	}
 
 	img {
@@ -1009,7 +1021,7 @@ textarea {
 			color: var(--color-content-secondary);
 
 			&:after {
-				content: '';
+				content: "";
 				position: absolute;
 				left: -2.5rem;
 				top: 50%;
@@ -1043,7 +1055,6 @@ textarea {
 		margin-top: 1rem;
 
 		a {
-
 			span {
 				display: none;
 			}
@@ -1062,6 +1073,7 @@ textarea {
 
 	&.archive-author {
 		padding-left: 16rem;
+
 		@media only screen and (max-width: $breakpoint-medium) {
 			padding-left: 0;
 			padding-right: 10rem;
@@ -1075,6 +1087,7 @@ textarea {
 			height: 10rem;
 			border-radius: 8rem;
 			overflow: hidden;
+
 			@media only screen and (max-width: $breakpoint-medium) {
 				left: auto;
 				right: 0;
@@ -1110,11 +1123,11 @@ textarea {
 		}
 
 		.archive-description {
-			color: rgba(255,255,255,0.8);
+			color: rgba(255, 255, 255, 0.8);
 		}
 
 		a {
-			color: rgba(255,255,255,0.8);
+			color: rgba(255, 255, 255, 0.8);
 
 			&:focus,
 			&:hover {
@@ -1136,6 +1149,7 @@ textarea {
 	max-width: $inner;
 	margin: 0 auto;
 	padding: 0 8rem;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		padding: 0 4rem;
 	}
@@ -1151,13 +1165,14 @@ textarea {
 	width: 100%;
 	z-index: 400;
 	transition: all ease-out 0.3s;
+
 	@media only screen and (max-width: $breakpoint-medium) {
-		transform: translate3d(0,-100%,0);
+		transform: translate3d(0, -100%, 0);
 	}
 }
 
 .menu-active .nav-header {
-	transform: translate3d(0,0,0);
+	transform: translate3d(0, 0, 0);
 }
 
 .nav-close {
@@ -1218,6 +1233,13 @@ textarea {
 			width: auto;
 			text-align: right;
 		}
+		
+		&.nav-account {
+			margin-left: 1rem;
+			width: auto;
+			text-align: right;
+		}
+
 
 		&:focus,
 		&:hover {
@@ -1233,13 +1255,15 @@ textarea {
 .menu-active .nav-header .nav-wrapper-control {
 	background: #222426;
 	color: var(--color-content-secondary);
-	border-color: #3B3D40;
+	border-color: #3b3d40;
+
 	@supports (-webkit-backdrop-filter: blur(2rem)) {
-		background: rgba(34,36,38,0.9);
+		background: rgba(34, 36, 38, 0.9);
 		-webkit-backdrop-filter: blur(2rem);
 	}
 
 	a {
+
 		&:focus,
 		&:hover {
 			color: var(--color-content-main-dark);
@@ -1252,11 +1276,13 @@ textarea {
 	max-height: calc(100vh - 6rem);
 	padding: 2rem 4rem;
 	overflow-y: auto;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		background: #222426;
 		flex-direction: column;
+
 		@supports (-webkit-backdrop-filter: blur(2rem)) {
-			background: rgba(34,36,38,0.9);
+			background: rgba(34, 36, 38, 0.9);
 			-webkit-backdrop-filter: blur(2rem);
 		}
 	}
@@ -1264,6 +1290,7 @@ textarea {
 
 .nav-header .logo {
 	margin-right: 3rem;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		display: none;
 	}
@@ -1288,6 +1315,7 @@ textarea {
 	margin: 0 auto;
 	padding: 0;
 	list-style: none;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		flex-direction: column;
 		flex-shrink: 0;
@@ -1297,6 +1325,7 @@ textarea {
 	&.nav-meta {
 		width: auto;
 		justify-content: flex-end;
+		align-items: center;
 
 		@media only screen and (max-width: $breakpoint-medium) {
 			width: 100%;
@@ -1313,7 +1342,7 @@ textarea {
 	&.active {
 		a:before {
 			position: absolute;
-			content: '';
+			content: "";
 			width: 100%;
 			height: 3px;
 			left: 0;
@@ -1322,6 +1351,7 @@ textarea {
 			margin-left: -1rem;
 			margin-top: -2rem;
 			background: var(--ghost-accent-color);
+
 			@media only screen and (max-width: $breakpoint-medium) {
 				left: 0;
 				top: 50%;
@@ -1362,7 +1392,7 @@ textarea {
 			padding-left: 4rem;
 
 			&:before {
-				content: '';
+				content: "";
 				position: absolute;
 				left: 0;
 				top: 50%;
@@ -1371,7 +1401,7 @@ textarea {
 				margin-left: 6px;
 				margin-top: -1px;
 				border-radius: 2px;
-				background: #3B3D40;
+				background: #3b3d40;
 			}
 		}
 
@@ -1380,7 +1410,7 @@ textarea {
 			color: var(--color-content-main);
 
 			@media only screen and (max-width: $breakpoint-medium) {
-				color: #C4C7CC;
+				color: #c4c7cc;
 			}
 		}
 	}
@@ -1409,9 +1439,8 @@ textarea {
 }
 
 .cover-active {
-
 	.nav-wrapper-control a {
-		color: rgba(255,255,255,0.8);
+		color: rgba(255, 255, 255, 0.8);
 
 		&:focus,
 		&:hover {
@@ -1422,8 +1451,8 @@ textarea {
 	.nav-header li {
 		a {
 			@media only screen and (min-width: $breakpoint-medium) {
-				color: rgba(255,255,255,0.8);
-				border-color: rgba(255,255,255,0.8);
+				color: rgba(255, 255, 255, 0.8);
+				border-color: rgba(255, 255, 255, 0.8);
 			}
 
 			&:focus,
@@ -1442,6 +1471,7 @@ textarea {
 		}
 	}
 }
+
 /* ==========================================================================
    Reading Progress
    ========================================================================== */
@@ -1466,6 +1496,7 @@ textarea {
 	height: 3px;
 	background: var(--ghost-accent-color);
 }
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -1498,6 +1529,7 @@ textarea {
 .nav-footer .nav-wrapper {
 	display: flex;
 	padding: 0 4rem;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		flex-direction: column;
 		text-align: center;
@@ -1511,6 +1543,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		margin-bottom: 3rem;
 		justify-content: center;
@@ -1595,14 +1628,14 @@ textarea {
 	height: 1.25em;
 	border: 1px solid var(--color-content-secondary);
 	box-sizing: border-box;
-	margin: 0 0.75rem 0 .25rem;
+	margin: 0 0.75rem 0 0.25rem;
 	border-radius: 2rem;
 	overflow: hidden;
 	transition: linear 0.2s background-color;
 }
 
 .theme-icon:after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 50%;
 	width: 100%;
@@ -1614,7 +1647,7 @@ textarea {
 .theme-dark {
 	.theme-icon {
 		border: 0;
-		background: #EB3;
+		background: #eb3;
 	}
 
 	.theme-icon:after {
@@ -1627,7 +1660,7 @@ textarea {
 .theme-light {
 	.theme-icon {
 		border: 0;
-		background: #6BF;
+		background: #6bf;
 	}
 
 	.theme-icon:after {
@@ -1636,7 +1669,7 @@ textarea {
 		width: 60%;
 		height: 60%;
 		border-radius: 2rem;
-		background: #FF3;
+		background: #ff3;
 	}
 }
 
@@ -1665,14 +1698,15 @@ textarea {
 	height: 4rem;
 	left: -4rem;
 	top: 0;
-	font-family: 'icon';
+	font-family: "icon";
 	font-size: 0.5em;
 	font-style: normal;
 	font-weight: normal;
-	content: '\e800';
-	color: #FFC336;
+	content: "\e800";
+	color: #ffc336;
 	text-align: center;
 }
+
 /* ==========================================================================
    Post
    ========================================================================== */
@@ -1686,7 +1720,7 @@ textarea {
 	margin-bottom: calc(4rem + 2vw);
 	background: black;
 	overflow: hidden;
-	text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .post-cover {
@@ -1712,15 +1746,19 @@ textarea {
 	}
 
 	&:after {
-		content: '';
+		content: "";
 		position: absolute;
 		width: 100%;
 		height: 66.666%;
 		left: 0;
 		bottom: 0;
 		z-index: 8;
-		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.333) 100%);
-		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.333) 100%);
+		background: -webkit-linear-gradient(top,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.333) 100%);
+		background: linear-gradient(to bottom,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.333) 100%);
 	}
 }
 
@@ -1747,7 +1785,7 @@ textarea {
 		color: var(--color-content-secondary);
 
 		&:after {
-			content: '';
+			content: "";
 			position: absolute;
 			left: -2.5rem;
 			top: 50%;
@@ -1829,12 +1867,12 @@ textarea {
 
 	&:after {
 		clear: both;
-		content: '';
+		content: "";
 		display: table;
 	}
 
 	&:before {
-		content: '';
+		content: "";
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -1849,7 +1887,7 @@ textarea {
 
 		&:after {
 			clear: both;
-			content: '';
+			content: "";
 			display: table;
 		}
 
@@ -1880,7 +1918,7 @@ textarea {
 }
 
 .has-cover .post-meta {
-	color: rgba(255,255,255,0.8);
+	color: rgba(255, 255, 255, 0.8);
 	padding: 0;
 
 	&:before {
@@ -1909,7 +1947,7 @@ textarea {
 	align-items: center;
 }
 
-.post-content > * {
+.post-content>* {
 	min-width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
@@ -1922,6 +1960,7 @@ textarea {
 		margin-top: 0;
 	}
 }
+
 /* ==========================================================================
    Post Info
    ========================================================================== */
@@ -1930,7 +1969,7 @@ textarea {
 
 	&:after {
 		clear: both;
-		content: '';
+		content: "";
 		display: table;
 	}
 }
@@ -1948,6 +1987,7 @@ textarea {
 	max-width: 33.33333%;
 	float: right;
 	display: flex;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		max-width: none;
 		float: none;
@@ -1968,6 +2008,7 @@ textarea {
 	color: white;
 	border-radius: 2em;
 	transition: all ease 0.2s;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		margin-left: 0;
 		margin-right: 0.66667em;
@@ -1993,19 +2034,19 @@ textarea {
 }
 
 .post-share .twitter {
-	background-color: #3EA9DD;
+	background-color: #3ea9dd;
 }
 
 .post-share .facebook {
-	background-color: #3C5A98;
+	background-color: #3c5a98;
 }
 
 .post-share .linkedin {
-	background-color: #0E76A8;
+	background-color: #0e76a8;
 }
 
 .post-share .email {
-	background-color: #2997EE;
+	background-color: #2997ee;
 }
 
 .post-tags {
@@ -2014,6 +2055,7 @@ textarea {
 	float: left;
 	display: flex;
 	flex-wrap: wrap;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		max-width: none;
 		float: none;
@@ -2043,6 +2085,7 @@ textarea {
 		opacity: 0.92;
 	}
 }
+
 /* ==========================================================================
    Post Comments
    ========================================================================== */
@@ -2070,9 +2113,7 @@ textarea {
    ========================================================================== */
 
 .gh-post-upgrade-cta {
-
 	.gh-post-upgrade-cta-content {
-
 		.gh-btn {
 			padding: 1rem 2rem;
 			border-radius: 0.5rem;
@@ -2102,7 +2143,7 @@ textarea {
 
 .post-nav:after {
 	position: absolute;
-	content: '';
+	content: "";
 	width: 1px;
 	height: 100%;
 	left: 50%;
@@ -2121,6 +2162,7 @@ textarea {
 	color: inherit;
 	display: block;
 	width: 50%;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		display: block;
 		width: 100%;
@@ -2141,6 +2183,7 @@ textarea {
 
 	.post-nav-teaser {
 		padding-right: 3rem;
+
 		@media only screen and (max-width: $breakpoint-medium) {
 			padding-right: 0;
 		}
@@ -2152,6 +2195,7 @@ textarea {
 
 	.post-nav-teaser {
 		padding-left: 3rem;
+
 		@media only screen and (max-width: $breakpoint-medium) {
 			padding-left: 0;
 		}
@@ -2162,13 +2206,14 @@ textarea {
 	position: relative;
 	padding: 2rem 0;
 	min-height: 8rem;
+
 	@media only screen and (max-width: $breakpoint-medium) {
 		min-height: 4em;
 		padding: 2em 0;
 
 		&:after {
 			position: absolute;
-			content: '';
+			content: "";
 			width: 100%;
 			height: 1px;
 			left: 0;
@@ -2255,7 +2300,7 @@ textarea {
 
 		&:after {
 			clear: both;
-			content: '';
+			content: "";
 			display: table;
 		}
 	}
@@ -2300,6 +2345,7 @@ textarea {
 	position: relative;
 	top: -1px;
 	display: inline-block;
+
 	@media only screen and (max-width: $breakpoint-small) {
 		display: none;
 	}
@@ -2344,4 +2390,26 @@ textarea {
 	.pagination-box {
 		border-bottom: 1px solid var(--color-background-contrast);
 	}
+}
+
+.button-primary {
+	padding: 0.5rem 1.2rem !important;
+	border-radius: 999px;
+	font-weight: bold;
+
+	&.filled {
+		color: white !important;
+		background: var(--ghost-accent-color);
+	}
+
+	&.outlined {
+		background: transparent;
+		border: 1px solid var(--ghost-accent-color);
+	}
+}
+
+.gh-head-button {
+	border-radius: 999px;
+	color: white !important;
+	background: var(--ghost-accent-color);
 }
